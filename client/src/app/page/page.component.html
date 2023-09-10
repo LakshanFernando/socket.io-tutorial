@@ -1,0 +1,31 @@
+<h1>Socket.io Exp</h1>
+<input [(ngModel)]="input">
+<button (click)="send()">Send Message</button>
+<button (click)="sendNotification()">Send Notification</button>
+<button (click)="sendRoomA()">Send Room A</button>
+<button (click)="sendRoomB()">Send Room B</button>
+<button (click)="joinRoomA()">Join Room A</button>
+<button (click)="joinRoomB()">Join Room B</button>
+<button (click)="disconnectBE()">Disconnect BE</button>
+<button (click)="disconnectFE()">Disconnect FE</button>
+<button (click)="connectFE()">connect FE</button>
+
+<label>---------------- Messages ------------------------</label>
+<ul>
+  <li *ngFor="let message of messages">{{message}}</li>
+</ul>
+
+<label>---------------- Notifications -----------------------</label>
+<ul>
+  <li *ngFor="let notification of notifications">{{notification}}</li>
+</ul>
+
+<label>------------------ Room A ----------------------</label>
+<ul>
+  <li *ngFor="let msg of roomA">{{msg}}</li>
+</ul>
+
+<label>------------------ Room B ----------------------</label>
+<ul>
+  <li *ngFor="let msg of roomB">{{msg}}</li>
+</ul>
